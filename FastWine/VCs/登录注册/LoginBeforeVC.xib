@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginBeforeVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rYA-Bz-4rd">
+                    <rect key="frame" x="132.5" y="124" width="149" height="67.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULL-4c-4XB">
+                    <rect key="frame" x="62" y="756" width="290" height="48"/>
+                    <color key="backgroundColor" red="0.3163985013961792" green="0.66458588838577271" blue="0.21856757998466492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="NLZ-n2-a49"/>
+                    </constraints>
+                    <state key="normal" title="     微信一键登录" image="wx_iconn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="ibWeChatLoginAction:" destination="-1" eventType="touchUpInside" id="bhx-yS-dbg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpY-W1-OUZ">
+                    <rect key="frame" x="132" y="819" width="150" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="VNM-CH-cYS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-204" maxY="0.0"/>
+                    <state key="normal" title="使用手机号登录" image="mark">
+                        <color key="titleColor" red="0.34505695104598999" green="0.34512165188789368" blue="0.34505286812782288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="ibPhoneLogin:" destination="-1" eventType="touchUpInside" id="Ub2-it-BPi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWG-nB-AjK">
+                    <rect key="frame" x="94.5" y="856" width="225" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="5FN-uD-fWw"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="注册或登录代表您已阅读并同意">
+                                <attributes>
+                                    <color key="NSColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="11" name=".PingFangSC-Regular"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="《服务条款》">
+                                <attributes>
+                                    <color key="NSColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="11" name=".PingFangSC-Regular"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="protocalClickAction:" destination="-1" eventType="touchUpInside" id="5Yg-Z5-pwH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UpY-W1-OUZ" firstAttribute="top" secondItem="ULL-4c-4XB" secondAttribute="bottom" constant="15" id="4XE-R1-aRf"/>
+                <constraint firstItem="rYA-Bz-4rd" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="IKa-DR-WaV"/>
+                <constraint firstAttribute="bottom" secondItem="UWG-nB-AjK" secondAttribute="bottom" constant="10" id="UOs-lM-Ycn"/>
+                <constraint firstItem="UWG-nB-AjK" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="cOY-bn-BmT"/>
+                <constraint firstItem="UWG-nB-AjK" firstAttribute="centerX" secondItem="UpY-W1-OUZ" secondAttribute="centerX" id="fyg-iW-VkR"/>
+                <constraint firstItem="rYA-Bz-4rd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="gUU-A7-9LR"/>
+                <constraint firstItem="ULL-4c-4XB" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="hEc-Fj-SmQ"/>
+                <constraint firstItem="UWG-nB-AjK" firstAttribute="top" secondItem="UpY-W1-OUZ" secondAttribute="bottom" constant="20" id="hMN-nl-Am7"/>
+                <constraint firstItem="ULL-4c-4XB" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="w4V-a2-iDe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_logo" width="149" height="67.5"/>
+        <image name="mark" width="4" height="10"/>
+        <image name="wx_iconn" width="20" height="17.5"/>
+    </resources>
+</document>

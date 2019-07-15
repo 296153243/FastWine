@@ -1,0 +1,17 @@
+//
+//  FastWine.pch
+//  FastWine
+//
+//  Created by MOOSON_ on 2019/3/12.
+//  Copyright © 2019年 MOOSON_. All rights reserved.
+//
+
+#ifndef FastWine_pch
+#define FastWine_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Constants.h"
+#import "03 Constant.h"
+#import "02 Macro.h"
+#endif /* FastWine_pch */

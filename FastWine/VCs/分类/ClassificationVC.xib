@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClassificationVC">
+            <connections>
+                <outlet property="ibSearchBar" destination="n0M-re-389" id="ecs-ja-tlz"/>
+                <outlet property="ibTableView" destination="7kJ-HQ-5lC" id="wlX-ZJ-s3b"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Kwu-4g-bI6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7kJ-HQ-5lC">
+                    <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mD8-Pr-8HQ"/>
+                        <outlet property="delegate" destination="-1" id="hG0-gN-uj9"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbb-ew-S74">
+                    <rect key="frame" x="0.0" y="44" width="414" height="84"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-MY-EbA">
+                            <rect key="frame" x="20" y="30" width="16" height="22"/>
+                            <state key="normal" image="bank_X"/>
+                            <connections>
+                                <action selector="ibbackAction:" destination="-1" eventType="touchUpInside" id="z0b-De-mRp"/>
+                            </connections>
+                        </button>
+                        <searchBar contentMode="redraw" placeholder="搜一搜" translatesAutoresizingMaskIntoConstraints="NO" id="n0M-re-389">
+                            <rect key="frame" x="51" y="21" width="313" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="JB1-id-VJ4"/>
+                            </constraints>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Pk9-GO-bjc"/>
+                            </connections>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="84" id="6b4-nd-Iks"/>
+                        <constraint firstItem="n0M-re-389" firstAttribute="centerY" secondItem="vTu-MY-EbA" secondAttribute="centerY" id="91T-vb-Mxq"/>
+                        <constraint firstItem="vTu-MY-EbA" firstAttribute="leading" secondItem="hbb-ew-S74" secondAttribute="leading" constant="20" id="DuR-t9-qM5"/>
+                        <constraint firstItem="vTu-MY-EbA" firstAttribute="top" secondItem="hbb-ew-S74" secondAttribute="top" constant="30" id="HOk-Kb-bbO"/>
+                        <constraint firstAttribute="trailing" secondItem="n0M-re-389" secondAttribute="trailing" constant="50" id="fcS-ox-qY7"/>
+                        <constraint firstItem="n0M-re-389" firstAttribute="leading" secondItem="vTu-MY-EbA" secondAttribute="trailing" constant="15" id="uSU-oU-8wA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hbb-ew-S74" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="O1b-QK-MYt"/>
+                <constraint firstItem="hbb-ew-S74" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Rt4-li-GZY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7kJ-HQ-5lC" secondAttribute="trailing" id="gQo-1W-fSB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7kJ-HQ-5lC" secondAttribute="bottom" id="hkb-rO-fSh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hbb-ew-S74" secondAttribute="trailing" id="ihm-VQ-gJB"/>
+                <constraint firstItem="7kJ-HQ-5lC" firstAttribute="top" secondItem="hbb-ew-S74" secondAttribute="bottom" id="mju-Oi-cvQ"/>
+                <constraint firstItem="7kJ-HQ-5lC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qDv-Zt-EnS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bank_X" width="16" height="16"/>
+    </resources>
+</document>

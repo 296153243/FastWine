@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <style>
+                p img {
+                  text-indent: 0;
+                        }
+          
+                img {
+                    min-width: 100% !important;
+                    max-width: 100% !important;
+                    height: auto !important;
+                    min-width: 100%;
+                    }
+        </style>
+          <style>
+              p table {
+                  text-indent: 0;
+              }
+          
+          table {
+              min-width: 100% !important;
+              max-width: 100% !important;
+              height: auto !important;
+          }
+          </style>
+          
+          <script src='jquery-2.2.0.js'></script>
+          <script src='jquery.lazyload.js'></script>
+          
+          <script type='text/javascript'>
+              jQuery(document).ready(
+                 function(){
+                    $("img").lazyload({
+                        placeholder : 'holder.jpg',
+                        threshold : 100,
+                        effect: "show"
+                    });
+                                     
+            });
+                                     
+        </script>
+  </head>
+  <body>
+     
+     <div class='text-content'>
+         {{Content_holder}}
+     </div>
+     
+  </body>
+</html>

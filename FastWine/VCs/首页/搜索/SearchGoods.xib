@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchGoods">
+            <connections>
+                <outlet property="ibCollectionView" destination="z9y-wP-2ED" id="3Lw-4m-hQt"/>
+                <outlet property="ibTextF" destination="vNb-A4-q18" id="gOv-7n-VuA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜索您想要的商品" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNb-A4-q18">
+                    <rect key="frame" x="56" y="40" width="299" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="ibTextVanlueChange:" destination="-1" eventType="valueChanged" id="6yV-NO-YMW"/>
+                    </connections>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z9y-wP-2ED">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KXS-nB-lYL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2Is-Mw-DG7"/>
+                        <outlet property="delegate" destination="-1" id="IYQ-hV-2kc"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLT-gY-qgV">
+                    <rect key="frame" x="20" y="44" width="16" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="TVG-OW-n1b"/>
+                    </constraints>
+                    <state key="normal" image="bank_X"/>
+                    <connections>
+                        <action selector="ibGoBackAction:" destination="-1" eventType="touchUpInside" id="aW3-LF-yAp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="z9y-wP-2ED" firstAttribute="top" secondItem="vNb-A4-q18" secondAttribute="bottom" constant="10" id="42R-Xn-Ss4"/>
+                <constraint firstItem="vNb-A4-q18" firstAttribute="centerY" secondItem="dLT-gY-qgV" secondAttribute="centerY" id="DXT-V9-VpH"/>
+                <constraint firstItem="vNb-A4-q18" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="c0e-o1-XxJ"/>
+                <constraint firstAttribute="bottom" secondItem="z9y-wP-2ED" secondAttribute="bottom" id="f0M-2U-Wgo"/>
+                <constraint firstItem="dLT-gY-qgV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="iKI-gp-PE6"/>
+                <constraint firstItem="vNb-A4-q18" firstAttribute="leading" secondItem="dLT-gY-qgV" secondAttribute="trailing" constant="20" id="ird-oB-A5c"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="z9y-wP-2ED" secondAttribute="trailing" id="m3p-ID-bDO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="vNb-A4-q18" secondAttribute="trailing" constant="20" id="pny-WK-l8r"/>
+                <constraint firstItem="z9y-wP-2ED" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="vqA-tS-y8O"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="118.29085457271366"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bank_X" width="16" height="16"/>
+    </resources>
+</document>

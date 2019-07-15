@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "设置"; ObjectID = "1JU-XZ-bAm"; */
+"1JU-XZ-bAm.text" = "设置";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "1xj-ah-JVs"; */
+"1xj-ah-JVs.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "8BQ-xC-UbL"; */
+"8BQ-xC-UbL.text" = "0";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "8Ul-K5-u0V"; */
+"8Ul-K5-u0V.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "停车记录"; ObjectID = "9Aa-jo-dcG"; */
+"9Aa-jo-dcG.text" = "停车记录";
+
+/* Class = "UIButton"; normalTitle = "已完成"; ObjectID = "D1Z-aT-u5K"; */
+"D1Z-aT-u5K.normalTitle" = "已完成";
+
+/* Class = "UILabel"; text = "15238955503"; ObjectID = "Kiu-c5-dAs"; */
+"Kiu-c5-dAs.text" = "15238955503";
+
+/* Class = "UIButton"; normalTitle = "待发货"; ObjectID = "MAO-HO-eXP"; */
+"MAO-HO-eXP.normalTitle" = "待发货";
+
+/* Class = "UILabel"; text = "我的订单"; ObjectID = "NIy-sA-LhD"; */
+"NIy-sA-LhD.text" = "我的订单";
+
+/* Class = "UIButton"; normalTitle = "待付款"; ObjectID = "QM5-DH-BOG"; */
+"QM5-DH-BOG.normalTitle" = "待付款";
+
+/* Class = "UILabel"; text = "实用功能"; ObjectID = "S71-W1-E6S"; */
+"S71-W1-E6S.text" = "实用功能";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "W4E-6b-sta"; */
+"W4E-6b-sta.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "我的爱车"; ObjectID = "XjX-Tx-r3n"; */
+"XjX-Tx-r3n.text" = "我的爱车";
+
+/* Class = "UILabel"; text = "登录"; ObjectID = "e3R-P9-USl"; */
+"e3R-P9-USl.text" = "登录";
+
+/* Class = "UIButton"; normalTitle = "待收货"; ObjectID = "glS-ze-2VM"; */
+"glS-ze-2VM.normalTitle" = "待收货";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "jrS-D6-1nP"; */
+"jrS-D6-1nP.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "kbf-PA-LGW"; */
+"kbf-PA-LGW.text" = "0";
+
+/* Class = "UILabel"; text = "查看全部"; ObjectID = "mQd-iy-jmJ"; */
+"mQd-iy-jmJ.text" = "查看全部";
+
+/* Class = "UILabel"; text = "OBD设备"; ObjectID = "nWr-Fg-YQj"; */
+"nWr-Fg-YQj.text" = "OBD设备";
+
+/* Class = "UIButton"; normalTitle = "查看设备"; ObjectID = "ovY-e4-KHm"; */
+"ovY-e4-KHm.normalTitle" = "查看设备";
