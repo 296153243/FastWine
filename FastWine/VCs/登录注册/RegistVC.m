@@ -275,10 +275,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)protocalClickAction:(id)sender
+- (IBAction)protocalClickAction:(UIButton *)sender
 {
     BaseRequest *req = [BaseRequest new];
-    req.id = @"1";//1:用户协议2:关于我们3:隐私政策
+    if (sender.tag == 1) {
+        req.id = @"16";//16:用户协议  17:服务条款 2:关于我们3:隐私政策
+
+    }else{
+        req.id = @"17";
+    }
     [[HTTPRequest sharedManager]requestDataWithApiName:article withParameters:req isEnable:YES withSuccess:^(id responseObject) {
         BaseWKWebController *vc = [[BaseWKWebController alloc]init];
         vc.content = responseObject[@"data"][@"content"][@"content"];

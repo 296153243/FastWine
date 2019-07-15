@@ -211,12 +211,11 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return 2;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) return 1;
-    if (section == 1) return _categoryArray.count;
-    if (section == 2) return _dataArr.count;
+    if (section == 1) return _dataArr.count;
     return 1;
 }
 
@@ -238,14 +237,7 @@
             
         };
         return cell;
-    } else if (indexPath.section == 1) {
-        MainCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MainCollectionCellID forIndexPath:indexPath];
-        MainCategoryModel *model = _categoryArray[indexPath.row];
-        
-        cell.ibTitleLab.text = model.cate_name;
-        [cell.ibIconImg sd_setImageWithURL:[NSURL URLWithString:model.pic]];
-        return cell;
-    }else{
+    } else{
       
         //商品
         OBDCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:OBDCollectionCellID forIndexPath:indexPath];
@@ -266,46 +258,35 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 1) {
-        SearchGoods *vc = [[SearchGoods alloc]initWithNibName:@"SearchGoods" bundle:nil];
-        MainCategoryModel *model = _categoryArray[indexPath.row];
-        vc.cid = model.id;
-        [self.navigationController pushViewController:vc animated:YES];
-        
-    } else  if (indexPath.section == 2) {
+  
         GoodsDetalisVC *vc = [[GoodsDetalisVC alloc]initWithNibName:@"GoodsDetalisVC" bundle:nil];
         MainGoodsModel *model = _dataArr[indexPath.row];
         vc.goodsId = model.id;
         [self.navigationController pushViewController:vc animated:YES];
-      
     }
+
     
 }
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) return CGSizeMake(SCREEN_WIDTH, 200);
-    if (indexPath.section == 1) return CGSizeMake((SCREEN_WIDTH - 140)/5, 80);
     
-    if (indexPath.section == 2) return CGSizeMake((SCREEN_WIDTH -20)/2, ((SCREEN_WIDTH -20)/2) * 1.4);
+    if (indexPath.section == 1) return CGSizeMake((SCREEN_WIDTH -20)/2, ((SCREEN_WIDTH -20)/2) * 1.4);
     
     return CGSizeMake((int)((SCREEN_WIDTH-48)/2), (SCREEN_WIDTH-48)/2 *3 /5 );
 }
 #pragma mark  定义每个UICollectionView的纵向间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     if (section == 1) return 10;
-    if (section == 2) return 10;
     return 0;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    if (section == 1) return 20;
-    if (section == 2) return 5;
-    
+    if (section == 1) return 5;
     return 0;
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    if (section == 1) return UIEdgeInsetsMake(5, 20, 5, 20);
-    if (section == 2) return UIEdgeInsetsMake(10, 5, 10, 5);
-    
+    if (section == 1) return UIEdgeInsetsMake(10, 5, 10, 5);
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 

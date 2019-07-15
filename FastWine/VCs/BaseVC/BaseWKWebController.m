@@ -26,14 +26,19 @@
     self.navigationController.navigationBar.barTintColor = NavColor;
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBarHidden = YES;
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.hidden = NO;
+
     QuNavigationBar *bar = [QuNavigationBar showQuNavigationBarWithController:self offset:NO];
     self.clNavBar = bar;
     self.clNavBar.titleColor =  navTitleColor;
-    self.clNavBar.title = @"加载中";
+    self.clNavBar.title = _titleStr;
    
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(20, 0, 44, 44);
@@ -41,6 +46,7 @@
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
     self.clNavBar.leftView = backBtn;
+
 //    //进度条初始化
     CGFloat progressBarHeight = 2.f;
     CGRect barFrame = CGRectMake(0, self.clNavBar.frame.size.height - progressBarHeight, self.clNavBar.frame.size.width, progressBarHeight);
@@ -128,9 +134,10 @@
 //加载完成
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
-    
+
     if (_titleStr) {
-        self.clNavBar.title = _titleStr;
+      
+        [self.clNavBar setTitle:_titleStr];
         
     }else{
         [webView evaluateJavaScript:@"document.title" completionHandler:^(id object, NSError * error) {
@@ -138,6 +145,7 @@
         }];
     }
     self.progressView.hidden = YES;
+
 }
 
 //加载失败
