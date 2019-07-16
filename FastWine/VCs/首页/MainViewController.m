@@ -684,17 +684,23 @@
             
             if (i == 2) {
                 //分配TableBar图标
-                [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBCOLOR(181, 31, 34)} forState:UIControlStateSelected];
                 if ([ACCOUNTINFO.userInfo.is_promoter integerValue] == 1) {
                     
-                    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"代理权益" image:[[UIImage imageNamed:@"Jiubei_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Jiubei_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-                    nav.tabBarItem.imageInsets = UIEdgeInsetsMake(-30, 0, 0, 0);
+                    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[[UIImage imageNamed:@"Jiubei_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Jiubei_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                    nav.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+                    nav.tabBarItem.title = @"代理权益";
+                    [nav.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-2)];
+                    [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBCOLOR(181, 31, 34)} forState:UIControlStateSelected];
                     
+
                     
                 }else{
-                    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"升级代理" image:[[UIImage imageNamed:@"Jiubei_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Jiubei_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-                    nav.tabBarItem.imageInsets = UIEdgeInsetsMake(-30, 0, 0, 0);
-                    
+                    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"" image:[[UIImage imageNamed:@"Jiubei_gray"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Jiubei_red"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                    nav.tabBarItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+                     nav.tabBarItem.title = @"升级代理";
+                    [nav.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-2)];
+                    [nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:RGBCOLOR(181, 31, 34)} forState:UIControlStateSelected];
+
                     
                 }
                 

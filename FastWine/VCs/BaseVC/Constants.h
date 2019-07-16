@@ -88,7 +88,7 @@
 
 //#define HOSTNAME @"http://cust.cluochuxing.com/"//用户
 //#define HOSTNAMEGENERAL @"http://sms.cluochuxing.com/"//通用
-#define HOSTNAME @"http://mall.jiudicar.com/"//正式
+#define HOSTNAME @"http://wine.jiudicar.com/"//正式
 
 //#define HOSTNAME @"http://jiudi.youacloud.com/index.php?"//正式
 

@@ -320,7 +320,6 @@
 //            [self.ibMainCollectionV reloadSections:indexSet];
 //            NSIndexSet *indexSet2 = [[NSIndexSet alloc] initWithIndex:2];
 //            [self.ibMainCollectionV reloadSections:indexSet2];
-           
             
         }];
         
