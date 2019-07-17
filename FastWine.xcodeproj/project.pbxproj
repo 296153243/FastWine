@@ -356,6 +356,14 @@
 		A530862122CD8DFE007065E5 /* CALayer+XQXibBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A53084C722CD8DFD007065E5 /* CALayer+XQXibBorderColor.m */; };
 		A530862222CD8DFE007065E5 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A53084C922CD8DFD007065E5 /* UINavigationBar+Awesome.m */; };
 		A530862322CD8DFE007065E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53084CA22CD8DFD007065E5 /* Info.plist */; };
+		A5FF59C222DF04BC00FF2EA6 /* BargainingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59C022DF04BC00FF2EA6 /* BargainingVC.m */; };
+		A5FF59C322DF04BC00FF2EA6 /* BargainingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF59C122DF04BC00FF2EA6 /* BargainingVC.xib */; };
+		A5FF59C922DF051000FF2EA6 /* BargainingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59C722DF051000FF2EA6 /* BargainingCell.m */; };
+		A5FF59CA22DF051000FF2EA6 /* BargainingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF59C822DF051000FF2EA6 /* BargainingCell.xib */; };
+		A5FF59D822DF0D4100FF2EA6 /* BargainDetalisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59D622DF0D4100FF2EA6 /* BargainDetalisVC.m */; };
+		A5FF59D922DF0D4100FF2EA6 /* BargainDetalisVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF59D722DF0D4100FF2EA6 /* BargainDetalisVC.xib */; };
+		A5FF59DD22DF0D7A00FF2EA6 /* BargainHeardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59DB22DF0D7A00FF2EA6 /* BargainHeardCell.m */; };
+		A5FF59DE22DF0D7A00FF2EA6 /* BargainHeardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF59DC22DF0D7A00FF2EA6 /* BargainHeardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -983,6 +991,18 @@
 		A5E7469422530A22006AB6CA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A5E7469622530AF4006AB6CA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A5E7469822530C2A006AB6CA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A5FF59BF22DF04BC00FF2EA6 /* BargainingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BargainingVC.h; sourceTree = "<group>"; };
+		A5FF59C022DF04BC00FF2EA6 /* BargainingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BargainingVC.m; sourceTree = "<group>"; };
+		A5FF59C122DF04BC00FF2EA6 /* BargainingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BargainingVC.xib; sourceTree = "<group>"; };
+		A5FF59C622DF051000FF2EA6 /* BargainingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BargainingCell.h; sourceTree = "<group>"; };
+		A5FF59C722DF051000FF2EA6 /* BargainingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BargainingCell.m; sourceTree = "<group>"; };
+		A5FF59C822DF051000FF2EA6 /* BargainingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BargainingCell.xib; sourceTree = "<group>"; };
+		A5FF59D522DF0D4100FF2EA6 /* BargainDetalisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BargainDetalisVC.h; sourceTree = "<group>"; };
+		A5FF59D622DF0D4100FF2EA6 /* BargainDetalisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BargainDetalisVC.m; sourceTree = "<group>"; };
+		A5FF59D722DF0D4100FF2EA6 /* BargainDetalisVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BargainDetalisVC.xib; sourceTree = "<group>"; };
+		A5FF59DA22DF0D7A00FF2EA6 /* BargainHeardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BargainHeardCell.h; sourceTree = "<group>"; };
+		A5FF59DB22DF0D7A00FF2EA6 /* BargainHeardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BargainHeardCell.m; sourceTree = "<group>"; };
+		A5FF59DC22DF0D7A00FF2EA6 /* BargainHeardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BargainHeardCell.xib; sourceTree = "<group>"; };
 		C21C9D55BB8D281775B3DEA7 /* libPods-FastWine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastWine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C8238525FBEA87BAB36406 /* Pods-FastWine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastWine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastWine/Pods-FastWine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1539,6 +1559,7 @@
 		A530831322CD8DFB007065E5 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF59C422DF04D800FF2EA6 /* 砍价 */,
 				A530837E22CD8DFC007065E5 /* ChooseAttr(选择商品属性) */,
 				A53083AA22CD8DFC007065E5 /* 二维码 */,
 				A530832322CD8DFB007065E5 /* 分销中心 */,
@@ -1796,13 +1817,13 @@
 		A530839D22CD8DFC007065E5 /* 话费充值 */ = {
 			isa = PBXGroup;
 			children = (
-				A530839E22CD8DFC007065E5 /* MoreCreditVC.h */,
-				A530839F22CD8DFC007065E5 /* MoreCreditRecordVC.m */,
-				A53083A022CD8DFC007065E5 /* MoreCreditVC.xib */,
-				A53083A122CD8DFC007065E5 /* MoreCreditVC.m */,
-				A53083A222CD8DFC007065E5 /* View */,
 				A53083A822CD8DFC007065E5 /* MoreCreditRecordVC.h */,
+				A530839F22CD8DFC007065E5 /* MoreCreditRecordVC.m */,
 				A53083A922CD8DFC007065E5 /* MoreCreditRecordVC.xib */,
+				A530839E22CD8DFC007065E5 /* MoreCreditVC.h */,
+				A53083A122CD8DFC007065E5 /* MoreCreditVC.m */,
+				A53083A022CD8DFC007065E5 /* MoreCreditVC.xib */,
+				A53083A222CD8DFC007065E5 /* View */,
 			);
 			path = "话费充值";
 			sourceTree = "<group>";
@@ -1811,9 +1832,9 @@
 			isa = PBXGroup;
 			children = (
 				A53083A322CD8DFC007065E5 /* MoreCreditRecordCell.h */,
-				A53083A422CD8DFC007065E5 /* PicListButton.h */,
 				A53083A522CD8DFC007065E5 /* MoreCreditRecordCell.m */,
 				A53083A622CD8DFC007065E5 /* MoreCreditRecordCell.xib */,
+				A53083A422CD8DFC007065E5 /* PicListButton.h */,
 				A53083A722CD8DFC007065E5 /* PicListButton.m */,
 			);
 			path = View;
@@ -2364,11 +2385,11 @@
 		A53084A522CD8DFD007065E5 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A53084A622CD8DFD007065E5 /* SecondskillCell.xib */,
-				A53084A722CD8DFD007065E5 /* SecondskillCell.h */,
 				A53084A822CD8DFD007065E5 /* EventCalendar.h */,
 				A53084A922CD8DFD007065E5 /* EventCalendar.m */,
+				A53084A722CD8DFD007065E5 /* SecondskillCell.h */,
 				A53084AA22CD8DFD007065E5 /* SecondskillCell.m */,
+				A53084A622CD8DFD007065E5 /* SecondskillCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2406,6 +2427,33 @@
 				A53084C922CD8DFD007065E5 /* UINavigationBar+Awesome.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A5FF59C422DF04D800FF2EA6 /* 砍价 */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF59C522DF04F400FF2EA6 /* view */,
+				A5FF59BF22DF04BC00FF2EA6 /* BargainingVC.h */,
+				A5FF59C022DF04BC00FF2EA6 /* BargainingVC.m */,
+				A5FF59C122DF04BC00FF2EA6 /* BargainingVC.xib */,
+				A5FF59D522DF0D4100FF2EA6 /* BargainDetalisVC.h */,
+				A5FF59D622DF0D4100FF2EA6 /* BargainDetalisVC.m */,
+				A5FF59D722DF0D4100FF2EA6 /* BargainDetalisVC.xib */,
+			);
+			path = "砍价";
+			sourceTree = "<group>";
+		};
+		A5FF59C522DF04F400FF2EA6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF59C622DF051000FF2EA6 /* BargainingCell.h */,
+				A5FF59C722DF051000FF2EA6 /* BargainingCell.m */,
+				A5FF59C822DF051000FF2EA6 /* BargainingCell.xib */,
+				A5FF59DA22DF0D7A00FF2EA6 /* BargainHeardCell.h */,
+				A5FF59DB22DF0D7A00FF2EA6 /* BargainHeardCell.m */,
+				A5FF59DC22DF0D7A00FF2EA6 /* BargainHeardCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		B37EB3C766D0262BA611814B /* Pods */ = {
@@ -2557,9 +2605,11 @@
 				A53085D022CD8DFE007065E5 /* expressionImage.plist in Resources */,
 				A53084F722CD8DFD007065E5 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				A53084D822CD8DFD007065E5 /* area.db in Resources */,
+				A5FF59DE22DF0D7A00FF2EA6 /* BargainHeardCell.xib in Resources */,
 				A530856D22CD8DFD007065E5 /* MainGoodsCell.xib in Resources */,
 				A53085A222CD8DFE007065E5 /* GoodsDetalisVC.xib in Resources */,
 				A530851E22CD8DFD007065E5 /* wc_drag_delete_activate@3x.png in Resources */,
+				A5FF59C322DF04BC00FF2EA6 /* BargainingVC.xib in Resources */,
 				A530850822CD8DFD007065E5 /* CouPonCell.xib in Resources */,
 				A530857822CD8DFD007065E5 /* GoodsWebCell.xib in Resources */,
 				A530854522CD8DFD007065E5 /* SettingVC.xib in Resources */,
@@ -2585,6 +2635,7 @@
 				A530859822CD8DFE007065E5 /* MoreCreditVC.xib in Resources */,
 				A530857A22CD8DFD007065E5 /* OBDCollectionCell.xib in Resources */,
 				A530854622CD8DFD007065E5 /* AboutUsVC.xib in Resources */,
+				A5FF59CA22DF051000FF2EA6 /* BargainingCell.xib in Resources */,
 				A53084D422CD8DFD007065E5 /* GuideImage.bundle in Resources */,
 				A53085AA22CD8DFE007065E5 /* OwnersHeardCell.xib in Resources */,
 				A530856422CD8DFD007065E5 /* MessageCell.xib in Resources */,
@@ -2618,6 +2669,7 @@
 				A530852422CD8DFD007065E5 /* LogisticsCell.xib in Resources */,
 				A53084DF22CD8DFD007065E5 /* jquery.lazyload.js in Resources */,
 				A530855E22CD8DFD007065E5 /* MyPromotionVC.xib in Resources */,
+				A5FF59D922DF0D4100FF2EA6 /* BargainDetalisVC.xib in Resources */,
 				A530855322CD8DFD007065E5 /* MainOneVC.xib in Resources */,
 				A530850622CD8DFD007065E5 /* MycollectionCell.xib in Resources */,
 				A530859B22CD8DFE007065E5 /* MoreCreditRecordCell.xib in Resources */,
@@ -2749,6 +2801,7 @@
 				A53085B322CD8DFE007065E5 /* OwnersRightsVC.m in Sources */,
 				A530853A22CD8DFD007065E5 /* AddressModel.m in Sources */,
 				A530859322CD8DFE007065E5 /* TCPropertyCell.m in Sources */,
+				A5FF59DD22DF0D7A00FF2EA6 /* BargainHeardCell.m in Sources */,
 				A530859522CD8DFE007065E5 /* TCPropertyHeader.m in Sources */,
 				A53085A022CD8DFE007065E5 /* OilCardVC.m in Sources */,
 				A530852C22CD8DFD007065E5 /* Save.m in Sources */,
@@ -2822,7 +2875,9 @@
 				A530854C22CD8DFD007065E5 /* AllEvaluationVC.m in Sources */,
 				A53084E122CD8DFD007065E5 /* FooterView.m in Sources */,
 				A530857C22CD8DFD007065E5 /* ShoppingCarCell.m in Sources */,
+				A5FF59C222DF04BC00FF2EA6 /* BargainingVC.m in Sources */,
 				A53085C422CD8DFE007065E5 /* WRNavigationBar.m in Sources */,
+				A5FF59D822DF0D4100FF2EA6 /* BargainDetalisVC.m in Sources */,
 				A530854B22CD8DFD007065E5 /* PersonalVC.m in Sources */,
 				A530857522CD8DFD007065E5 /* MainCollectionCell.m in Sources */,
 				A530854422CD8DFD007065E5 /* AddressPickerView.m in Sources */,
@@ -2974,6 +3029,7 @@
 				A530860322CD8DFE007065E5 /* QMPickedOtherViewController.m in Sources */,
 				A530854222CD8DFD007065E5 /* AddressTableViewCell.m in Sources */,
 				A53084E522CD8DFD007065E5 /* PopoverPresentationController.m in Sources */,
+				A5FF59C922DF051000FF2EA6 /* BargainingCell.m in Sources */,
 				A53084FD22CD8DFD007065E5 /* QuShareShowView.m in Sources */,
 				A530850D22CD8DFD007065E5 /* EvaluationVC.m in Sources */,
 				A53084EF22CD8DFD007065E5 /* QuLoadingHUD.m in Sources */,

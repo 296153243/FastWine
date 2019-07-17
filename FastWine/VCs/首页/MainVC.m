@@ -31,6 +31,7 @@
 #import "CouPonVC.h"
 #import "OwnersRightsVC.h"
 #import "IhaveGoodsVC.h"
+#import "BargainingVC.h"
 @interface MainVC ()<UICollectionViewDataSource, UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,FSPageContentViewDelegate,FSSegmentTitleViewDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *ibSearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *ibMainCollectionV;
@@ -337,6 +338,8 @@
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 2){
             //砍价
+            BargainingVC *vc = [[BargainingVC alloc]initWithNibName:@"BargainingVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
         }else{
             //优惠券
             CouPonVC *vc = [[CouPonVC alloc]initWithNibName:@"CouPonVC" bundle:nil];
