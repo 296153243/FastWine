@@ -29,6 +29,8 @@
 #import "RegistVC.h"
 #import "MainOneVC.h"
 #import "CouPonVC.h"
+#import "OwnersRightsVC.h"
+#import "IhaveGoodsVC.h"
 @interface MainVC ()<UICollectionViewDataSource, UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UISearchBarDelegate,FSPageContentViewDelegate,FSSegmentTitleViewDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *ibSearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *ibMainCollectionV;
@@ -209,11 +211,12 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 4;
+    return 5;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) return 1;
-    if (section == 3) return _dataArr.count;
+    if (section == 1) return _titleArr.count;
+    if (section == 4) return _dataArr.count;
     return 1;
 }
 
@@ -238,6 +241,12 @@
         return cell;
     } else if (indexPath.section == 1) {
         //热卖
+        MainCollectionCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:MainCollectionCellID forIndexPath:indexPath];
+        cell.ibTitleLab.text = _titleArr[indexPath.row];
+        cell.ibIconImg.image = [UIImage imageNamed:_titleIconArr[indexPath.row]];
+        return cell;
+    } else if (indexPath.section == 2) {
+        //热卖
         MainHotGoodsCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:MainHotGoodsCellID forIndexPath:indexPath];
 
         if (_isRefresh != YES) {
@@ -257,7 +266,7 @@
             [self.navigationController pushViewController:vc animated:YES];
         };
         return cell;
-    }else if (indexPath.section == 2) {
+    }else if (indexPath.section == 3) {
         //热销
         MainHotCakesCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:MainHotCakesCellID forIndexPath:indexPath];
 //        cell.dataArr = _hotGoodsArray;
@@ -318,12 +327,23 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 1) {
-        SearchGoods *vc = [[SearchGoods alloc]initWithNibName:@"SearchGoods" bundle:nil];
-        MainCategoryModel *model = _categoryArray[indexPath.row];
-        vc.cid = model.cid;
-        [self.navigationController pushViewController:vc animated:YES];
+        if (indexPath.row == 0) {
+           //招商代理
+            OwnersRightsVC *vc = [[OwnersRightsVC alloc]initWithNibName:@"OwnersRightsVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 1){
+           //商务合作
+            IhaveGoodsVC *vc = [[IhaveGoodsVC alloc]initWithNibName:@"IhaveGoodsVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 2){
+            //砍价
+        }else{
+            //优惠券
+            CouPonVC *vc = [[CouPonVC alloc]initWithNibName:@"CouPonVC" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         
-    } else  if (indexPath.section == 3) {
+    } else  if (indexPath.section == 4) {
         GoodsDetalisVC *vc = [[GoodsDetalisVC alloc]initWithNibName:@"GoodsDetalisVC" bundle:nil];
         MainGoodsModel *model = _dataArr[indexPath.row];
         vc.goodsId = model.id;
@@ -335,13 +355,23 @@
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) return CGSizeMake(SCREEN_WIDTH, 200);
-    if (indexPath.section == 1) return CGSizeMake(SCREEN_WIDTH, 230);
-    if (indexPath.section == 2) return CGSizeMake(SCREEN_WIDTH, 170);
-    if (indexPath.section == 3) return CGSizeMake(SCREEN_WIDTH, 265);
+    if (indexPath.section == 1) return CGSizeMake((SCREEN_WIDTH - 140)/4, 80);
+    if (indexPath.section == 2) return CGSizeMake(SCREEN_WIDTH, 230);
+    if (indexPath.section == 3) return CGSizeMake(SCREEN_WIDTH, 170);
+    if (indexPath.section == 4) return CGSizeMake(SCREEN_WIDTH, 265);
 
     return CGSizeMake((int)((SCREEN_WIDTH-48)/2), (SCREEN_WIDTH-48)/2 *3 /5 );
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == 1) return 20;
+    return 0;
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    if (section == 1) return UIEdgeInsetsMake(10, 20, 10, 20);
+    
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
 #pragma mark 获取轮播图数据
 ///获取轮播图
 - (void)requestDataWithGetFlash
@@ -438,15 +468,8 @@
             [self presentViewController:nav animated:YES completion:nil];
             
         }
-        if ([ACCOUNTINFO.userInfo.is_promoter integerValue] == 1) {
-            self.titleArr = @[@"代理权益",@"客户管理",@"推广二维码",@"搜索"];
-            self.titleIconArr = @[@"main_dianzhuquanyi",@"main_kehuguanli",@"main_erweima",@"main_sousuo"];
-        }else{
-            self.titleArr = @[@"升级代理",@"客户管理",@"推广二维码",@"搜索"];
-            self.titleIconArr = @[@"main_dianzhuquanyi",@"main_kehuguanli",@"main_erweima",@"main_sousuo"];
-            
-
-        }
+        self.titleArr = @[@"招商代理",@"商务合作",@"砍价",@"优惠券"];
+        self.titleIconArr = @[@"main_daili",@"main_hezuo",@"main_kanjia",@"main_youhuiquan"];
         
         [UIView performWithoutAnimation:^{
             //刷新界面
