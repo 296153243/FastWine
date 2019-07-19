@@ -213,6 +213,12 @@ NSString *XQApiNameEnum(XQApiName name)
             break;
         case set_cooperate:return @"api/auth_api/set_cooperate";
             break;
+        case cut_list:return @"api/store/cut_list";
+            break;
+        case cut_con:return @"api/store/cut_con";
+            break;
+        case cut_now_buy:return @" api/auth_api/now_buy";
+            break;
         default:return @"";
             break;
     }

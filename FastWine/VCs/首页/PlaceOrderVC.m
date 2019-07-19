@@ -202,8 +202,12 @@
     }else if(indexPath.section == 4){
         cell = [[NSBundle mainBundle]loadNibNamed:@"PlaceOrderCell" owner:nil options:nil][4];
         [cell.ibYueBtn addTarget:self action:@selector(ibChooseYueAction:) forControlEvents:UIControlEventTouchUpInside];
-        cell.ibYuanbaoNumLab.text = [NSString stringWithFormat:@"可用元宝%@",ACCOUNTINFO.userInfo.integral];
-     
+        cell.ibYuanbaoNumLab.text = [NSString stringWithFormat:@"可用元宝%@",_dataRsp.userInfo.integral];
+        if (self.dataRsp.integral == 1) {
+            //代理商品时默认勾选元宝
+            cell.ibYueBtn.selected = YES;
+            _isChooseYue = YES;
+        }
         
     }else if(indexPath.section == 5){
         cell = [[NSBundle mainBundle]loadNibNamed:@"PlaceOrderCell" owner:nil options:nil][5];
@@ -381,6 +385,11 @@
     }
     
     [[HTTPRequest sharedManager]requestDataWithApiName:create_order  withParameters:req isEnable:YES withSuccess:^(id responseObject) {
+        if ([responseObject[@"msg"] isEqualToString:@"支付成功"]) {
+            [QuHudHelper qu_showMessage:responseObject[@"msg"]];
+            [self goOrderListVC];//去订单列表
+            return ;
+        }
         QuPayType quPayType;
         NSObject *data;
         if ([self.payType isEqualToString:@"weixin"]) {

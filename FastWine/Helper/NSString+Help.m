@@ -831,35 +831,38 @@
     NSDate *startDate =[date dateFromString:startTime];
     NSDate *endDdate = [date dateFromString:endTime];
     
-    NSTimeInterval startInterval = [startDate timeIntervalSince1970]*1;
-    NSTimeInterval endInterval = [endDdate timeIntervalSince1970]*1;
-    NSTimeInterval value = endInterval - startInterval;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSDateComponents *dateComponents = [cal components:unitFlags fromDate:startDate toDate:endDdate options:0];
     
     // 天
-    int day = (int)value / (24 *3600);
+    NSInteger day = [dateComponents day];
     // 小时
-    int house = (int)value / (24 *3600)%3600;
+    NSInteger house = [dateComponents hour];
     // 分
-    int minute = (int)value /60%60;
+    NSInteger minute = [dateComponents minute];
     // 秒
-    int second = (int)value %60;
+    NSInteger second = [dateComponents second];
     
     NSString *timeStr;
-    
+    NSString *longStr;
     if (day != 0) {
-        timeStr = [NSString stringWithFormat:@"距结束%d小时%d分%d秒",house,minute,second];
+        timeStr = [NSString stringWithFormat:@"%zd天%zd小时%zd分%zd秒",day,house,minute,second];
     }
     else if (day==0 && house !=0) {
-        timeStr = [NSString stringWithFormat:@"距结束%d小时%d分%d秒",house,minute,second];
+        timeStr = [NSString stringWithFormat:@"%zd小时%zd分%zd秒",house,minute,second];
     }
     else if (day==0 && house==0 && minute!=0) {
-        timeStr = [NSString stringWithFormat:@"距结束%d分%d秒",minute,second];
+        timeStr = [NSString stringWithFormat:@"%zd分%zd秒",minute,second];
     }
     else{
-        timeStr = [NSString stringWithFormat:@"距结束%d秒",second];
+        timeStr = [NSString stringWithFormat:@"%zd秒",second];
     }
-    
-    return timeStr;
+    longStr = [NSString stringWithFormat:@"%zd,%zd,%zd,%zd,",day,house,minute,second];
+    if (day > 0) {
+        longStr = [NSString stringWithFormat:@"%zd,%zd,%zd,%zd,",day,house + (24 * day),minute,second];
+    }
+    return longStr;
 }
 
 

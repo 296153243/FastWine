@@ -690,6 +690,8 @@
 //@property(strong,nonatomic)NSDictionary *priceGroup;
 @property(nonatomic,strong)PriceGroupModel *priceGroup;
 @property (strong, nonatomic) QuUserInfo *userInfo;//
+@property (strong, nonatomic)NSString *id;
+@property (nonatomic)NSInteger integral;//1的时候是会员商品可以全部用元宝
 @end
 @interface WarningDetalisModel : NSObject
 @property (strong, nonatomic)NSString *id;
@@ -1390,3 +1392,94 @@
 @property (nonatomic , copy) NSString              * phone;
 @property (nonatomic , copy) NSString              * content;
 @end
+
+@interface CutListModel : NSObject
+
+@property (nonatomic , copy) NSString              * id;
+@property (nonatomic , copy) NSString              * bargain_price;
+@property (nonatomic , copy) NSString              * min_price;
+@property (nonatomic , copy) NSString              * price;
+@property (nonatomic , copy) NSString              * status;
+@property (nonatomic , copy) NSString              * title;
+@property (nonatomic , copy) NSString              * image;
+@property (assign,nonatomic) NSNumber              * stop_time;
+@property (assign,nonatomic) NSNumber              * add_time; 
+
+@end
+
+@interface CutListRsp : NSObject
+
+@property (nonatomic,strong) NSArray              * involved;
+@property (nonatomic,strong) NSArray              * normal;
+
+@end
+@interface CutReq : BaseRequest
+
+@property (strong, nonatomic)NSString *bargainUid;//自己砍为0，砍别人的传对方id
+
+
+@end
+
+@interface UserInfoBargainModel : NSObject
+
+@property (nonatomic , copy) NSString              * uid;
+@property (nonatomic , copy) NSString              * account;
+@property (nonatomic , copy) NSString              * nickname;
+@property (nonatomic , copy) NSString              * price;
+@property (nonatomic , copy) NSString              * status;
+@property (nonatomic , copy) NSString              * title;
+@property (nonatomic , copy) NSString              * image;
+@property (assign,nonatomic) NSNumber              * stop_time;
+@property (assign,nonatomic) NSNumber              * add_time;
+
+@end
+
+@interface BargainModel : NSObject
+
+@property (nonatomic , copy) NSString              * rule;
+@property (nonatomic , copy) NSString              * id;
+@property (nonatomic , copy) NSString              * product_id;
+@property (nonatomic , copy) NSString              * bargain_num;
+@property (nonatomic , copy) NSString              * num;
+@property (nonatomic , copy) NSString              * title;
+@property (nonatomic , copy) NSString              * price;
+@property (nonatomic , copy) NSString              * min_price;
+@property (assign,nonatomic) NSNumber              * start_time;
+@property (assign,nonatomic) NSNumber              * stop_time;
+@property (nonatomic , copy) NSString              * store_name;
+@property (assign,nonatomic) NSNumber              * time;
+@property (nonatomic , copy) NSString              * image;
+@end
+@interface UserHelpListModel : NSObject
+
+@property (nonatomic , copy) NSString              * id;
+@property (nonatomic , copy) NSString              * uid;
+@property (nonatomic , copy) NSString              * price;
+@property (nonatomic , copy) NSString              * nickname;
+@property (nonatomic , copy) NSString              * avatar;
+
+
+@end
+
+
+@interface CutDetailsRsp : NSObject
+
+@property (nonatomic , copy) NSString              * userInfoBargainBool;
+@property (nonatomic , copy) NSString              * selfCut;
+@property (nonatomic , copy) NSString              * selfCutPrice;//已经砍掉多少钱
+@property (nonatomic , copy) NSString              * price;//距离目标
+@property (nonatomic) NSInteger              pricePercent;//砍价进度
+
+
+@property (nonatomic , copy) NSString              * status;
+@property (nonatomic , copy) NSString              * title;
+@property (nonatomic , copy) NSString              * image;
+@property (assign,nonatomic) NSNumber              * stop_time;
+@property (assign,nonatomic) NSNumber              * add_time;
+
+@property(nonatomic,strong) NSDictionary           *userHelpList;
+@property (nonatomic,strong) NSArray               *userHelpLists;
+@property(nonatomic,strong) BargainModel            *bargain;
+@property(nonatomic,strong) UserInfoBargainModel    *userInfoBargain;
+@end
+

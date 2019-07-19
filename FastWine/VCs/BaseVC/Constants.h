@@ -76,8 +76,8 @@
 #ifdef DEBUG
 //#define HOSTNAME @"http://mall.jiudicar.com/"//正式
 //#define HOSTNAME @"http://wine.jiudi.cn/"//本地api
-//#define HOSTNAME @"http://test.jiudicar.com/"//test
-#define HOSTNAME @"http://wine.jiudicar.com/"//正式
+#define HOSTNAME @"http://test.jiudicar.com/"//test
+//#define HOSTNAME @"http://wine.jiudicar.com/"//正式
 
 
 
@@ -248,6 +248,8 @@ alpha:alphaValue]
 #define LOGIN_SUCCESS_NOTIFICATION  @"LOGIN_SUCCESS_NOTIFICATION"
 #define UPLOADMAINDATA_NOTIFICATION  @"UPLOADMAINDATA_NOTIFICATION"
 #define UPLOADMIAOSHADATA_NOTIFICATION  @"UPLOADMIAOSHADATA_NOTIFICATION"
+#define CATVIVWEND_NOTIFICATION  @"CATVIVWEND_NOTIFICATION"
+#define CATDETALISEND_NOTIFICATION  @"CATDETALISEND_NOTIFICATION"
 
 #define TOKEN_INVAILD_NOTIFICATION  @"TOKEN_INVAILD_NOTIFICATION"
 #define SHOW_VOICE_NOTIFICATION  @"SHOW_VOICE_NOTIFICATION"

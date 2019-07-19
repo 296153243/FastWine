@@ -356,6 +356,11 @@
 		A530862122CD8DFE007065E5 /* CALayer+XQXibBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A53084C722CD8DFD007065E5 /* CALayer+XQXibBorderColor.m */; };
 		A530862222CD8DFE007065E5 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A53084C922CD8DFD007065E5 /* UINavigationBar+Awesome.m */; };
 		A530862322CD8DFE007065E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A53084CA22CD8DFD007065E5 /* Info.plist */; };
+		A54B4B7F22E00ABD00AA060D /* RPLoopQueueView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B4B7E22E00ABD00AA060D /* RPLoopQueueView.m */; };
+		A54B4B8822E011A000AA060D /* KanListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B4B8622E011A000AA060D /* KanListTableCell.m */; };
+		A54B4B8922E011A000AA060D /* KanListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54B4B8722E011A000AA060D /* KanListTableCell.xib */; };
+		A54B4B8D22E01D3700AA060D /* BargainTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B4B8B22E01D3700AA060D /* BargainTitleCell.m */; };
+		A54B4B8E22E01D3700AA060D /* BargainTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54B4B8C22E01D3700AA060D /* BargainTitleCell.xib */; };
 		A5FF59C222DF04BC00FF2EA6 /* BargainingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59C022DF04BC00FF2EA6 /* BargainingVC.m */; };
 		A5FF59C322DF04BC00FF2EA6 /* BargainingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF59C122DF04BC00FF2EA6 /* BargainingVC.xib */; };
 		A5FF59C922DF051000FF2EA6 /* BargainingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF59C722DF051000FF2EA6 /* BargainingCell.m */; };
@@ -986,6 +991,14 @@
 		A53084C922CD8DFD007065E5 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		A53084CA22CD8DFD007065E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A53084CB22CD8DFD007065E5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A54B4B7D22E00ABD00AA060D /* RPLoopQueueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPLoopQueueView.h; sourceTree = "<group>"; };
+		A54B4B7E22E00ABD00AA060D /* RPLoopQueueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPLoopQueueView.m; sourceTree = "<group>"; };
+		A54B4B8522E011A000AA060D /* KanListTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KanListTableCell.h; sourceTree = "<group>"; };
+		A54B4B8622E011A000AA060D /* KanListTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KanListTableCell.m; sourceTree = "<group>"; };
+		A54B4B8722E011A000AA060D /* KanListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KanListTableCell.xib; sourceTree = "<group>"; };
+		A54B4B8A22E01D3700AA060D /* BargainTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BargainTitleCell.h; sourceTree = "<group>"; };
+		A54B4B8B22E01D3700AA060D /* BargainTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BargainTitleCell.m; sourceTree = "<group>"; };
+		A54B4B8C22E01D3700AA060D /* BargainTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BargainTitleCell.xib; sourceTree = "<group>"; };
 		A5E7469022530878006AB6CA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A5E7469222530A10006AB6CA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		A5E7469422530A22006AB6CA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -2397,34 +2410,34 @@
 		A53084AD22CD8DFD007065E5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				A53084AE22CD8DFD007065E5 /* UIView+Help.h */,
-				A53084AF22CD8DFD007065E5 /* UIImage+Help.m */,
-				A53084B022CD8DFD007065E5 /* UITableView+FooterBlank.m */,
-				A53084B122CD8DFD007065E5 /* UITextField+Help.m */,
-				A53084B222CD8DFD007065E5 /* UIButton+Gradient.h */,
-				A53084B322CD8DFD007065E5 /* UIColor+HEX.m */,
-				A53084B422CD8DFD007065E5 /* UIButton+NZCustom.h */,
-				A53084B522CD8DFD007065E5 /* UIImage+Gradient.h */,
-				A53084B622CD8DFD007065E5 /* UIBarButtonItem+Extension.h */,
-				A53084B722CD8DFD007065E5 /* UIButton+Help.m */,
-				A53084B822CD8DFD007065E5 /* UINavigationBar+Awesome.h */,
-				A53084B922CD8DFD007065E5 /* UILabel+Custom.m */,
 				A53084BA22CD8DFD007065E5 /* CALayer+XQXibBorderColor.h */,
-				A53084BB22CD8DFD007065E5 /* NSString+Help.h */,
-				A53084BC22CD8DFD007065E5 /* UITableView+FooterBlank.h */,
-				A53084BD22CD8DFD007065E5 /* UIImage+Help.h */,
-				A53084BE22CD8DFD007065E5 /* UIView+Help.m */,
-				A53084BF22CD8DFD007065E5 /* UIColor+HEX.h */,
-				A53084C022CD8DFD007065E5 /* UIButton+Gradient.m */,
-				A53084C122CD8DFD007065E5 /* UITextField+Help.h */,
-				A53084C222CD8DFD007065E5 /* UIButton+Help.h */,
-				A53084C322CD8DFD007065E5 /* UIBarButtonItem+Extension.m */,
-				A53084C422CD8DFD007065E5 /* UIImage+Gradient.m */,
-				A53084C522CD8DFD007065E5 /* UIButton+NZCustom.m */,
-				A53084C622CD8DFD007065E5 /* NSString+Help.m */,
 				A53084C722CD8DFD007065E5 /* CALayer+XQXibBorderColor.m */,
+				A53084BB22CD8DFD007065E5 /* NSString+Help.h */,
+				A53084C622CD8DFD007065E5 /* NSString+Help.m */,
+				A53084B622CD8DFD007065E5 /* UIBarButtonItem+Extension.h */,
+				A53084C322CD8DFD007065E5 /* UIBarButtonItem+Extension.m */,
+				A53084B222CD8DFD007065E5 /* UIButton+Gradient.h */,
+				A53084C022CD8DFD007065E5 /* UIButton+Gradient.m */,
+				A53084C222CD8DFD007065E5 /* UIButton+Help.h */,
+				A53084B722CD8DFD007065E5 /* UIButton+Help.m */,
+				A53084B422CD8DFD007065E5 /* UIButton+NZCustom.h */,
+				A53084C522CD8DFD007065E5 /* UIButton+NZCustom.m */,
+				A53084BF22CD8DFD007065E5 /* UIColor+HEX.h */,
+				A53084B322CD8DFD007065E5 /* UIColor+HEX.m */,
+				A53084B522CD8DFD007065E5 /* UIImage+Gradient.h */,
+				A53084C422CD8DFD007065E5 /* UIImage+Gradient.m */,
+				A53084BD22CD8DFD007065E5 /* UIImage+Help.h */,
+				A53084AF22CD8DFD007065E5 /* UIImage+Help.m */,
 				A53084C822CD8DFD007065E5 /* UILabel+Custom.h */,
+				A53084B922CD8DFD007065E5 /* UILabel+Custom.m */,
+				A53084B822CD8DFD007065E5 /* UINavigationBar+Awesome.h */,
 				A53084C922CD8DFD007065E5 /* UINavigationBar+Awesome.m */,
+				A53084BC22CD8DFD007065E5 /* UITableView+FooterBlank.h */,
+				A53084B022CD8DFD007065E5 /* UITableView+FooterBlank.m */,
+				A53084C122CD8DFD007065E5 /* UITextField+Help.h */,
+				A53084B122CD8DFD007065E5 /* UITextField+Help.m */,
+				A53084AE22CD8DFD007065E5 /* UIView+Help.h */,
+				A53084BE22CD8DFD007065E5 /* UIView+Help.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2446,12 +2459,20 @@
 		A5FF59C522DF04F400FF2EA6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A54B4B7D22E00ABD00AA060D /* RPLoopQueueView.h */,
+				A54B4B7E22E00ABD00AA060D /* RPLoopQueueView.m */,
 				A5FF59C622DF051000FF2EA6 /* BargainingCell.h */,
 				A5FF59C722DF051000FF2EA6 /* BargainingCell.m */,
 				A5FF59C822DF051000FF2EA6 /* BargainingCell.xib */,
 				A5FF59DA22DF0D7A00FF2EA6 /* BargainHeardCell.h */,
 				A5FF59DB22DF0D7A00FF2EA6 /* BargainHeardCell.m */,
 				A5FF59DC22DF0D7A00FF2EA6 /* BargainHeardCell.xib */,
+				A54B4B8522E011A000AA060D /* KanListTableCell.h */,
+				A54B4B8622E011A000AA060D /* KanListTableCell.m */,
+				A54B4B8722E011A000AA060D /* KanListTableCell.xib */,
+				A54B4B8A22E01D3700AA060D /* BargainTitleCell.h */,
+				A54B4B8B22E01D3700AA060D /* BargainTitleCell.m */,
+				A54B4B8C22E01D3700AA060D /* BargainTitleCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -2648,6 +2669,7 @@
 				A530857422CD8DFD007065E5 /* MainHotCakesCell.xib in Resources */,
 				A53084CC22CD8DFD007065E5 /* LaunchScreen.strings in Resources */,
 				A530858022CD8DFD007065E5 /* MainHotSaleCell.xib in Resources */,
+				A54B4B8922E011A000AA060D /* KanListTableCell.xib in Resources */,
 				A530859F22CD8DFE007065E5 /* QrCodeVC.xib in Resources */,
 				A530852A22CD8DFD007065E5 /* AllOrderVC.xib in Resources */,
 				A530857322CD8DFD007065E5 /* GoodsDetalisCell.xib in Resources */,
@@ -2662,6 +2684,7 @@
 				A53085A322CD8DFE007065E5 /* PlaceOrderVC.xib in Resources */,
 				A53084CD22CD8DFD007065E5 /* Main.strings in Resources */,
 				A530852E22CD8DFD007065E5 /* PersonOrderCell.xib in Resources */,
+				A54B4B8E22E01D3700AA060D /* BargainTitleCell.xib in Resources */,
 				A53084FC22CD8DFD007065E5 /* QuShareShowView.xib in Resources */,
 				A530853522CD8DFD007065E5 /* AllAddressVC.xib in Resources */,
 				A53084DB22CD8DFD007065E5 /* holder.jpg in Resources */,
@@ -2858,6 +2881,7 @@
 				A53084F522CD8DFD007065E5 /* ChineseToPinyinResource.m in Sources */,
 				A530858E22CD8DFE007065E5 /* XPSemiModalTransitioningDelegate.m in Sources */,
 				A530858122CD8DFD007065E5 /* MainHotGoodsCell.m in Sources */,
+				A54B4B8822E011A000AA060D /* KanListTableCell.m in Sources */,
 				A530853822CD8DFD007065E5 /* MyDeviceVC.m in Sources */,
 				A53084E422CD8DFD007065E5 /* PopAnimator.m in Sources */,
 				A530859622CD8DFE007065E5 /* TCCountFooterView.m in Sources */,
@@ -2976,6 +3000,7 @@
 				A530860F22CD8DFE007065E5 /* KillGoodsDetalisVC.m in Sources */,
 				A53085B522CD8DFE007065E5 /* CommonMethod.m in Sources */,
 				A530857E22CD8DFD007065E5 /* TitleCollectionCell.m in Sources */,
+				A54B4B7F22E00ABD00AA060D /* RPLoopQueueView.m in Sources */,
 				A53085F922CD8DFE007065E5 /* QMItemCollectionCell.m in Sources */,
 				A53085E122CD8DFE007065E5 /* QMChatRoomBaseCell.m in Sources */,
 				A530861E22CD8DFE007065E5 /* UIImage+Gradient.m in Sources */,
@@ -2996,6 +3021,7 @@
 				A530858F22CD8DFE007065E5 /* ORSKUDataFilter.m in Sources */,
 				A53085C922CD8DFE007065E5 /* BaseWKWebController.m in Sources */,
 				A530854F22CD8DFD007065E5 /* MainOneVC.m in Sources */,
+				A54B4B8D22E01D3700AA060D /* BargainTitleCell.m in Sources */,
 				A53084E222CD8DFD007065E5 /* ZFEmptyView.m in Sources */,
 				A530854322CD8DFD007065E5 /* PLUITextView.m in Sources */,
 				A53085D622CD8DFE007065E5 /* QMChatRoomCellFactory.m in Sources */,

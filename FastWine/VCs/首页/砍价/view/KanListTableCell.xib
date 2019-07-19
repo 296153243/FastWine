@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="KanListTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="砍了6.6元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A67-qa-pEf">
+                        <rect key="frame" x="352" y="22" width="60" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.56464225050000005" green="0.56474250560000006" blue="0.56463593239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="屠龙宝刀，帮你砍一刀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LV1-G6-Z5C">
+                        <rect key="frame" x="60" y="34" width="133" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.56464225050000005" green="0.56474250560000006" blue="0.56463593239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kan_share" translatesAutoresizingMaskIntoConstraints="NO" id="2B2-Bs-n9c">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="5Bv-6z-CtX"/>
+                            <constraint firstAttribute="width" constant="40" id="mWf-h0-IH9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帮砍一刀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04n-4h-DYB">
+                        <rect key="frame" x="60" y="10" width="62" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.42348030209999998" green="0.42355769869999998" blue="0.4234754443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kan_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-TW-JBg">
+                        <rect key="frame" x="320" y="20" width="22" height="20"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LV1-G6-Z5C" firstAttribute="leading" secondItem="04n-4h-DYB" secondAttribute="leading" id="1Q8-M1-drG"/>
+                    <constraint firstItem="A67-qa-pEf" firstAttribute="centerY" secondItem="xO2-TW-JBg" secondAttribute="centerY" id="HoC-N6-C8b"/>
+                    <constraint firstItem="04n-4h-DYB" firstAttribute="top" secondItem="2B2-Bs-n9c" secondAttribute="top" id="QrJ-Ns-i2b"/>
+                    <constraint firstItem="LV1-G6-Z5C" firstAttribute="bottom" secondItem="2B2-Bs-n9c" secondAttribute="bottom" id="Qxt-YG-kqt"/>
+                    <constraint firstItem="A67-qa-pEf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eDJ-Y7-BOA"/>
+                    <constraint firstItem="04n-4h-DYB" firstAttribute="leading" secondItem="2B2-Bs-n9c" secondAttribute="trailing" constant="10" id="evD-gL-ek8"/>
+                    <constraint firstItem="A67-qa-pEf" firstAttribute="leading" secondItem="xO2-TW-JBg" secondAttribute="trailing" constant="10" id="kJh-iM-yLg"/>
+                    <constraint firstAttribute="trailing" secondItem="A67-qa-pEf" secondAttribute="trailing" constant="10" id="lig-mI-JEK"/>
+                    <constraint firstItem="2B2-Bs-n9c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="opk-FF-sw4"/>
+                    <constraint firstItem="2B2-Bs-n9c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vno-3p-OAJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <inset key="separatorInset" minX="1500" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="ibPicLab" destination="A67-qa-pEf" id="0Nl-uR-MaU"/>
+                <outlet property="ibUserImg" destination="2B2-Bs-n9c" id="qAS-45-Jjo"/>
+                <outlet property="ibUserName" destination="LV1-G6-Z5C" id="tci-tg-6Vc"/>
+            </connections>
+            <point key="canvasLocation" x="211.59420289855075" y="108.48214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="kan_icon" width="22" height="20"/>
+        <image name="kan_share" width="35" height="35"/>
+    </resources>
+</document>

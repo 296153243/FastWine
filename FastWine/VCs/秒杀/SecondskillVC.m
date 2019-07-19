@@ -31,7 +31,7 @@
 //    KillVC *vc = [KillVC new];
 //    [self.navigationController pushViewController:vc animated:YES];
     
-    
+
 }
 
 
@@ -39,8 +39,13 @@
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationBar.barTintColor = NavColor;
-    
+ 
 
+//    if (_gcdTimer) {
+//        // 终止定时器
+//        dispatch_suspend(_gcdTimer);
+//    }
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -164,7 +169,7 @@
             NSString *timeYue = [formatteryue stringFromDate:[NSDate date]];
             NSString *enddateStrs = [NSString stringWithFormat:@"%@-%@-%@ 23:59:59",timeYear,timeYue,str];
            
-//            NSLog(@"enddate %@",enddateStrs);
+            NSLog(@"enddate %@",enddateStrs);
             [NSString dateTimeDifferenceWithStartTime:timeString endTime:enddateStrs];
         
             NSArray *arr = [[NSString dateTimeDifferenceWithStartTime:timeString endTime:enddateStrs]componentsSeparatedByString:@","];

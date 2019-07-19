@@ -11,6 +11,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BargainingCell : UITableViewCell
+@property(nonatomic,strong)CutListModel *viewModel;
+@property (weak, nonatomic) IBOutlet UIImageView *ibGoodsImg;
+@property (weak, nonatomic) IBOutlet UILabel *ibGoodsNameLab;
+@property (weak, nonatomic) IBOutlet UILabel *ibyijingkanjiaLab;
+@property (weak, nonatomic) IBOutlet UIView *ibTimeView;
+@property (weak, nonatomic) IBOutlet UILabel *ibKandaoLab;
+
+@property (weak, nonatomic) IBOutlet UILabel *ibTianLab;
+@property (weak, nonatomic) IBOutlet UILabel *ibShiLab;
+@property (weak, nonatomic) IBOutlet UILabel *ibFenLab;
+@property (weak, nonatomic) IBOutlet UILabel *ibMaioLab;
+@property (weak, nonatomic) IBOutlet UIButton *ibBtn;
+
+@property(nonatomic,strong)dispatch_source_t gcdTimer;
 
 @end
 

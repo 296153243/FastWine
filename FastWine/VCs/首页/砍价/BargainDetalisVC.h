@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BargainDetalisVC : UIViewController
-
+@interface BargainDetalisVC : JDBaseVC
+@property(nonatomic,strong)NSString *catId;
 @end
 
 NS_ASSUME_NONNULL_END

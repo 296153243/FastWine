@@ -111,6 +111,9 @@ typedef NS_ENUM(NSInteger,XQApiName) {
     get_coupon_user,//新人领取优惠券
     seckill_index,//秒杀商品
     set_cooperate,//我有好货
+    cut_list,//砍价列表
+    cut_con,//砍价
+    cut_now_buy,//购买砍价商品
 };
 NSString *XQApiNameEnum(XQApiName name);
 

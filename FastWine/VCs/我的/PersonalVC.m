@@ -319,6 +319,7 @@
     [[HTTPRequest sharedManager]requesGetDataWithApiName:mainGoodsList withParameters:req isEnable:YES withSuccess:^(id responseObject) {
         MainGoodsRsp *mainGoodsRsp = [MainGoodsRsp mj_objectWithKeyValues:responseObject];
         [self.dataArr addObjectsFromArray:mainGoodsRsp.data];
+     
         [self.ibCollectionView reloadData];
         NSIndexSet *indexSet = [[NSIndexSet alloc] initWithIndex:3];
         [self.ibCollectionView reloadSections:indexSet];

@@ -906,3 +906,57 @@
 
 
 @end
+
+@implementation CutListModel
+
+
+@end
+
+@implementation CutListRsp
+
+-(id)init{
+    
+    if (self == [super init]) {
+        [CutListRsp mj_setupObjectClassInArray:^NSDictionary *{
+            return @{@"involved":@"CutListModel",
+                     @"normal":@"CutListModel",
+                     };
+        }];
+    }
+    return self;
+}
+@end
+@implementation CutReq
+
+@end
+@implementation UserInfoBargainModel
+
+
+@end
+
+@implementation BargainModel
+
+
+@end
+
+@implementation UserHelpListModel
+
+@end
+
+@implementation CutDetailsRsp
+
+-(void)setUserHelpList:(NSDictionary *)userHelpList{
+    _userHelpList = userHelpList;
+    if (_userHelpList) {
+        NSMutableArray *dicToArray = [NSMutableArray array];
+        [_userHelpList enumerateKeysAndObjectsUsingBlock:^(id _Nonnull key, id _Nonnull obj, BOOL * _Nonnull stop) {
+            
+            UserHelpListModel *model = [UserHelpListModel mj_objectWithKeyValues:obj];
+            [dicToArray addObject:model];
+            
+        }];
+        _userHelpLists = dicToArray;
+    }
+}
+@end
+
