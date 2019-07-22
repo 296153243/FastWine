@@ -76,8 +76,8 @@
 #ifdef DEBUG
 //#define HOSTNAME @"http://mall.jiudicar.com/"//正式
 //#define HOSTNAME @"http://wine.jiudi.cn/"//本地api
-#define HOSTNAME @"http://test.jiudicar.com/"//test
-//#define HOSTNAME @"http://wine.jiudicar.com/"//正式
+//#define HOSTNAME @"http://test.jiudicar.com/"//test
+#define HOSTNAME @"http://wine.jiudicar.com/"//正式
 
 
 

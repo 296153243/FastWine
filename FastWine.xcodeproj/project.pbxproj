@@ -1314,8 +1314,6 @@
 				A53083E022CD8DFC007065E5 /* BaseVC */,
 				A53083FC22CD8DFC007065E5 /* 分类 */,
 				A530840622CD8DFC007065E5 /* 客服 */,
-				A530848B22CD8DFD007065E5 /* 停车 */,
-				A530849122CD8DFD007065E5 /* 设备 */,
 				A530849D22CD8DFD007065E5 /* 秒杀 */,
 			);
 			path = VCs;
@@ -1324,7 +1322,6 @@
 		A530829122CD8DFB007065E5 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				A530831122CD8DFB007065E5 /* 我的爱车 */,
 				A530829622CD8DFB007065E5 /* 我的收藏 */,
 				A530830C22CD8DFB007065E5 /* 我的余额 */,
 				A530829E22CD8DFB007065E5 /* 优惠券 */,
@@ -1552,21 +1549,6 @@
 				A530830F22CD8DFB007065E5 /* MyBalanceVC.h */,
 			);
 			path = "我的余额";
-			sourceTree = "<group>";
-		};
-		A530831122CD8DFB007065E5 /* 我的爱车 */ = {
-			isa = PBXGroup;
-			children = (
-				A530831222CD8DFB007065E5 /* 车牌号键盘 */,
-			);
-			path = "我的爱车";
-			sourceTree = "<group>";
-		};
-		A530831222CD8DFB007065E5 /* 车牌号键盘 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "车牌号键盘";
 			sourceTree = "<group>";
 		};
 		A530831322CD8DFB007065E5 /* 首页 */ = {
@@ -2235,148 +2217,6 @@
 				A530848422CD8DFD007065E5 /* QMPickedDocViewController.h */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A530848B22CD8DFD007065E5 /* 停车 */ = {
-			isa = PBXGroup;
-			children = (
-				A530848C22CD8DFD007065E5 /* 首页 */,
-				A530849022CD8DFD007065E5 /* view */,
-			);
-			path = "停车";
-			sourceTree = "<group>";
-		};
-		A530848C22CD8DFD007065E5 /* 首页 */ = {
-			isa = PBXGroup;
-			children = (
-				A530848D22CD8DFD007065E5 /* VC */,
-				A530848E22CD8DFD007065E5 /* Model */,
-				A530848F22CD8DFD007065E5 /* View */,
-			);
-			path = "首页";
-			sourceTree = "<group>";
-		};
-		A530848D22CD8DFD007065E5 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		A530848E22CD8DFD007065E5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A530848F22CD8DFD007065E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A530849022CD8DFD007065E5 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A530849122CD8DFD007065E5 /* 设备 */ = {
-			isa = PBXGroup;
-			children = (
-				A530849222CD8DFD007065E5 /* 围栏 */,
-				A530849422CD8DFD007065E5 /* 报警 */,
-				A530849622CD8DFD007065E5 /* 车辆检测 */,
-				A530849722CD8DFD007065E5 /* 行程 */,
-				A530849922CD8DFD007065E5 /* View */,
-				A530849B22CD8DFD007065E5 /* 详情 */,
-			);
-			path = "设备";
-			sourceTree = "<group>";
-		};
-		A530849222CD8DFD007065E5 /* 围栏 */ = {
-			isa = PBXGroup;
-			children = (
-				A530849322CD8DFD007065E5 /* view */,
-			);
-			path = "围栏";
-			sourceTree = "<group>";
-		};
-		A530849322CD8DFD007065E5 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A530849422CD8DFD007065E5 /* 报警 */ = {
-			isa = PBXGroup;
-			children = (
-				A530849522CD8DFD007065E5 /* View */,
-			);
-			path = "报警";
-			sourceTree = "<group>";
-		};
-		A530849522CD8DFD007065E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A530849622CD8DFD007065E5 /* 车辆检测 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "车辆检测";
-			sourceTree = "<group>";
-		};
-		A530849722CD8DFD007065E5 /* 行程 */ = {
-			isa = PBXGroup;
-			children = (
-				A530849822CD8DFD007065E5 /* view */,
-			);
-			path = "行程";
-			sourceTree = "<group>";
-		};
-		A530849822CD8DFD007065E5 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		A530849922CD8DFD007065E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A530849A22CD8DFD007065E5 /* Config */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A530849A22CD8DFD007065E5 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		A530849B22CD8DFD007065E5 /* 详情 */ = {
-			isa = PBXGroup;
-			children = (
-				A530849C22CD8DFD007065E5 /* View */,
-			);
-			path = "详情";
-			sourceTree = "<group>";
-		};
-		A530849C22CD8DFD007065E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A530849D22CD8DFD007065E5 /* 秒杀 */ = {
