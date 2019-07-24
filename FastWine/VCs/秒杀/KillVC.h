@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KillVC : UIViewController
+@interface KillVC : JDBaseVC
 @property (weak, nonatomic) IBOutlet UITableView *ibTableView;
 -(void)uploadMiaoshaData:(NSNotification *)notification;
 @end

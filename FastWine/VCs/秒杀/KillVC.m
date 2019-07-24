@@ -22,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if (![Save isLogin]) {
+        [self presentLoginWithComplection:^{
+        }];        
+    }
     //接收刷新数据通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(uploadMiaoshaData:)

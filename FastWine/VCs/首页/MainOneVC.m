@@ -62,15 +62,7 @@
     [super viewWillAppear:animated];
   
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    //    [self requestAppVersionCheck];
-    if (![Save isLogin]) {
-        [self presentLoginWithComplection:^{
-        }];
-        return;
-    }else{
-//        [self requestUserInfo];
-        
-    }
+
     
 }
 
@@ -124,11 +116,11 @@
     searchField.layer.cornerRadius = 5;
     
 //    //接收刷新数据通知
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(uploadData:)
-//                                                 name:UPLOADMAINDATA_NOTIFICATION
-//                                               object:nil];
-// 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(uploadData:)
+                                                 name:UPLOADMAINDATA_NOTIFICATION
+                                               object:nil];
+//
     
     
 }
@@ -356,45 +348,7 @@
     }];
     
 }
-//MARK:----获取个人信息
--(void)requestUserInfo{
-    
-    [[HTTPRequest sharedManager]requesGetDataWithApiName:getInformation withParameters:nil isEnable:YES withSuccess:^(id responseObject) {
-        QuUserInfo *userInfo = [QuUserInfo mj_objectWithKeyValues:responseObject[@"data"][@"user_info"]];
-        
-        ACCOUNTINFO.userInfo = userInfo;
-        if (ACCOUNTINFO.userInfo.phone.length == 0) {
-            //没有绑定电话 完善信息
-            RegistVC *vc = [[RegistVC alloc]initWithNibName:@"RegistVC" bundle:nil];
-            vc.type = @"3";
-            BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:vc];
-            [self presentViewController:nav animated:YES completion:nil];
-            
-        }
-        if ([ACCOUNTINFO.userInfo.is_promoter integerValue] == 1) {
-            self.titleArr = @[@"代理权益",@"客户管理",@"推广二维码",@"搜索"];
-            self.titleIconArr = @[@"main_dianzhuquanyi",@"main_kehuguanli",@"main_erweima",@"main_sousuo"];
-        }else{
-            self.titleArr = @[@"升级代理",@"客户管理",@"推广二维码",@"搜索"];
-            self.titleIconArr = @[@"main_dianzhuquanyi",@"main_kehuguanli",@"main_erweima",@"main_sousuo"];
-            
-            if(![[NSUserDefaults standardUserDefaults] boolForKey:AfterLoggingIn]){
-                //   NSLog(@"第一次启动");
-                [self addGuideView]; //添加广告图
-                
-            }
-        }
-        
-        [UIView performWithoutAnimation:^{
-            //刷新界面
-            [self.ibMainCollectionV reloadData];
-        }];
-    
-        
-    } withError:^(NSError *error) {
-        
-    }];
-}
+
 
 - (IBAction)ibCityBtn:(id)sender {
 }

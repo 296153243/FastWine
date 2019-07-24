@@ -31,11 +31,18 @@
 
 @implementation OwnersRightsVC
 -(void)viewWillAppear:(BOOL)animated{
+    
+
     [self requestGetWallet];
     [self requestUserInfo];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (![Save isLogin]) {
+        [self presentLoginWithComplection:^{
+        }];
+    }
     // Do any additional setup after loading the view from its nib.
     if ([ACCOUNTINFO.userInfo.is_promoter integerValue] == 1) {
          self.navigationItem.title = @"代理权益";

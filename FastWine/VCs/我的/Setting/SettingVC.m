@@ -229,6 +229,8 @@
     
     [Save saveUser:[User new]];
     [self.navigationController popViewControllerAnimated:YES];
+    ACCOUNTINFO.userInfo = nil;
+    ACCOUNTINFO.isLogin = NO;
 //    LoginOutReq *req = [LoginOutReq new];
 //    NSString *uid = [PublicManager getLocalUserId];
 //    NSString *phone = [PublicManager getLocalPhone];

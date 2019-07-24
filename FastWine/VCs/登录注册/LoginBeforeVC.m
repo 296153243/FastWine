@@ -31,6 +31,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)bBackAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (IBAction)ibWeChatLoginAction:(id)sender {
     WS(weakSelf)
     [[ThirdApiManager shareManager]getThirdUserInfoCompletion:^(NSString *uid,NSString *nickName,NSString *headUrl,NSString *wxToken) {

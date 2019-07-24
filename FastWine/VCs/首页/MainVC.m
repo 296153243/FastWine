@@ -61,15 +61,7 @@
     [super viewWillAppear:animated];
   
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    //    [self requestAppVersionCheck];
-    if (![Save isLogin]) {
-        [self presentLoginWithComplection:^{
-        }];
-        return;
-    }else{
-        [self requestUserInfo];
-        
-    }
+
     
 }
 
@@ -87,6 +79,9 @@
                                              selector:@selector(loginSuccess)
                                                  name:LOGIN_SUCCESS_NOTIFICATION
                                                object:nil];
+    
+    self.titleArr = @[@"招商代理",@"商务合作",@"砍价",@"优惠券"];
+    self.titleIconArr = @[@"main_daili",@"main_hezuo",@"main_kanjia",@"main_youhuiquan"];
     [self requestDataWithGetFlash];
     [self requestHotkeyword];
     self.pageIndex = 0;
@@ -138,7 +133,6 @@
     
 }
 -(void)loginSuccess{
-    [self requestUserInfo];
     [self requestDataWithGetFlash];
     [self requestMainGoodsListWithIdx:_pageIndex];
     
@@ -259,6 +253,11 @@
         }
         
         cell.newsClickBlock = ^{
+            if (![Save isLogin]) {
+                [self presentLoginWithComplection:^{
+                }];
+                return ;
+            }
             [self requestget_coupon_user];
         };
         cell.itemClickBlock = ^(MainCategoryModel * _Nonnull model) {
@@ -328,6 +327,11 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 1) {
+        if (![Save isLogin]) {
+            [self presentLoginWithComplection:^{
+            }];
+            return ;
+        }
         if (indexPath.row == 0) {
            //招商代理
             OwnersRightsVC *vc = [[OwnersRightsVC alloc]initWithNibName:@"OwnersRightsVC" bundle:nil];
@@ -455,35 +459,7 @@
     }];
     
 }
-//MARK:----获取个人信息
--(void)requestUserInfo{
-    
-    
-    [[HTTPRequest sharedManager]requesGetDataWithApiName:getInformation withParameters:nil isEnable:YES withSuccess:^(id responseObject) {
-        QuUserInfo *userInfo = [QuUserInfo mj_objectWithKeyValues:responseObject[@"data"][@"user_info"]];
-        
-        ACCOUNTINFO.userInfo = userInfo;
-        if (ACCOUNTINFO.userInfo.phone.length == 0) {
-            //没有绑定电话 完善信息
-            RegistVC *vc = [[RegistVC alloc]initWithNibName:@"RegistVC" bundle:nil];
-            vc.type = @"3";
-            BaseNavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:vc];
-            [self presentViewController:nav animated:YES completion:nil];
-            
-        }
-        self.titleArr = @[@"招商代理",@"商务合作",@"砍价",@"优惠券"];
-        self.titleIconArr = @[@"main_daili",@"main_hezuo",@"main_kanjia",@"main_youhuiquan"];
-        
-        [UIView performWithoutAnimation:^{
-            //刷新界面
-            [self.ibMainCollectionV reloadData];
-        }];
-     
-        
-    } withError:^(NSError *error) {
-        
-    }];
-}
+
 //MARK:----热门关键子
 -(void)requestHotkeyword{
     [[HTTPRequest sharedManager]requesGetDataWithApiName:hotkeyword withParameters:nil isEnable:YES withSuccess:^(id responseObject) {
@@ -503,8 +479,6 @@
     } withError:^(NSError *error) {
         
     }];
-}
-- (IBAction)ibCityBtn:(id)sender {
 }
 
 
